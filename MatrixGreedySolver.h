@@ -9,6 +9,7 @@
 #include <memory>
 #include <limits>
 #include <chrono>
+#include <iomanip>
 
 #ifndef PRACTICA_3_MATRIXGREEDYSOLVER_H
 #define PRACTICA_3_MATRIXGREEDYSOLVER_H
@@ -27,13 +28,13 @@ class MatrixGreedySolver {
         void initSolution();
         void printDataResult();
         void resetLists(MatrixList&);
+        static intMatrix makeProduct(intMatrix&, intMatrix&);
     private:
         //Support Functions
         static bool compareAsRowSize(intMatrix&, intMatrix&);
         static bool compareAsColumnSize(intMatrix&, intMatrix&);
         int findRowCompatible(size_t, bool&);
         static int findMatrixInList(MatrixList&, intMatrix&, bool&);
-        static intMatrix makeProduct(intMatrix&, intMatrix&);
         static void printMatricesSizes(MatrixList&);
         //Class Attributes
         MatrixList column_list;

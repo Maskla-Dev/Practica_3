@@ -69,9 +69,10 @@ void MatrixGreedySolver::initSolution() {
 
 void MatrixGreedySolver::printDataResult() {
     std::cout << std::endl;
-    std::cout << "Arithmetic Operations: " << arithmetic_operations << std::endl;
-    std::cout << "Matrices Multiplications: " << matrix_operations << std::endl;
-    std::cout << "Time execution (milliseconds): " << time_frame.count() << "\n" << std::endl;
+    std::cout << "Greedy Algorithm:\n";
+    std::cout << std::setw(4) << "Arithmetic Operations: " << arithmetic_operations << std::endl;
+    std::cout << std::setw(4) << "Matrices Multiplications: " << matrix_operations << std::endl;
+    std::cout << std::setw(4) << "Time execution (milliseconds): " << time_frame.count() << "\n" << std::endl;
 }
 
 void MatrixGreedySolver::resetLists(MatrixList& matrix_list) {
@@ -130,7 +131,7 @@ int MatrixGreedySolver::findMatrixInList(MatrixList& list, intMatrix& matrix, bo
 
 void MatrixGreedySolver::printMatricesSizes(MatrixList & source) {
     char letter = 'A';
-    std::cout << "|-------Greedy Algorithm with:\n";
+    std::cout << "|--------------------Test with:\n";
     for(auto& i : source){
         std::cout << "\t" << letter << "[" << i.size() << "," << i[0].size() << "]" << std::endl;
         ++letter;
